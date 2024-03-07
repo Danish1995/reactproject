@@ -1,6 +1,7 @@
 import { EXAMPLES } from "../data.js";
 import { useState } from "react";
 import TabButton from "./TabButton.jsx";
+import Section from "./Section.jsx";
 export default function Exampls() {
   const [selectedTopic, setSelectedTopic] = useState();
   function handleClick(selectedButton) {
@@ -9,8 +10,7 @@ export default function Exampls() {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section id="examples" title="Examples">
       <menu>
         <TabButton onSelect={() => handleClick("components")}>
           {/* () => handleClick("Components") this code will execute when button is clicked this is very common pratice in react
@@ -32,6 +32,6 @@ export default function Exampls() {
           </pre>
         </div>
       )}
-    </section>
+    </Section>
   );
 }
